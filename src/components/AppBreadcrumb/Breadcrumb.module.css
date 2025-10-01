@@ -1,0 +1,27 @@
+/* Breadcrumb */
+.breadcrumb {
+  padding: var(--space-4) 0;
+  background-color: var(--surface-color);
+  border-bottom: 1px solid var(--border-color);
+  font-size: var(--font-size-sm);
+}
+
+.breadcrumbLink {
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.breadcrumbLink:hover {
+  color: var(--primary-color);
+}
+
+.breadcrumbSeparator {
+  color: var(--text-light);
+  margin: 0 var(--space-2);
+}
+
+.breadcrumbCurrent {
+  color: var(--text-primary);
+  font-weight: 600;
+}

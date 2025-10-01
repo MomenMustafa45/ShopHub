@@ -1,0 +1,117 @@
+.productList {
+  display: grid;
+  grid-template-columns: repeat(var(--mobile-columns, 1), 1fr);
+  gap: var(--space-6);
+  width: 100%;
+}
+
+.loadingContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-12);
+  text-align: center;
+}
+
+.loadingText {
+  margin-top: var(--space-4);
+  color: var(--text-secondary);
+  font-size: var(--font-size-lg);
+}
+
+.errorContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-12);
+  text-align: center;
+  background-color: var(--surface-color);
+  border-radius: var(--border-radius-lg);
+  border: 1px solid var(--border-color);
+}
+
+.errorIcon {
+  font-size: 3rem;
+  margin-bottom: var(--space-4);
+}
+
+.errorTitle {
+  font-size: var(--font-size-xl);
+  color: var(--text-primary);
+  margin-bottom: var(--space-2);
+}
+
+.errorMessage {
+  color: var(--text-secondary);
+  margin-bottom: var(--space-6);
+  max-width: 400px;
+}
+
+.retryButton {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: var(--space-3) var(--space-6);
+  border-radius: var(--border-radius);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.retryButton:hover {
+  background-color: var(--primary-dark);
+  transform: translateY(-1px);
+}
+
+.emptyContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-12);
+  text-align: center;
+  background-color: var(--surface-color);
+  border-radius: var(--border-radius-lg);
+  border: 1px solid var(--border-color);
+}
+
+.emptyIcon {
+  font-size: 3rem;
+  margin-bottom: var(--space-4);
+}
+
+.emptyTitle {
+  font-size: var(--font-size-xl);
+  color: var(--text-primary);
+  margin-bottom: var(--space-2);
+}
+
+.emptyMessage {
+  color: var(--text-secondary);
+  max-width: 400px;
+}
+
+/* Tablet styles */
+@media (min-width: 768px) {
+  .productList {
+    grid-template-columns: repeat(var(--tablet-columns, 2), 1fr);
+    gap: var(--space-6);
+  }
+}
+
+/* Desktop styles */
+@media (min-width: 1024px) {
+  .productList {
+    grid-template-columns: repeat(var(--desktop-columns, 3), 1fr);
+    gap: var(--space-8);
+  }
+}
+
+/* Large desktop styles */
+@media (min-width: 1280px) {
+  .productList {
+    grid-template-columns: repeat(var(--desktop-columns, 4), 1fr);
+  }
+}
