@@ -3,6 +3,7 @@ import axios, {
   type InternalAxiosRequestConfig,
 } from "axios";
 
+// we can get it from .env file
 const API_BASE_URL = "https://fakestoreapi.com";
 
 export const apiClient = axios.create({
